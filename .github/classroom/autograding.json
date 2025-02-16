@@ -1,0 +1,84 @@
+{
+  "tests": [
+    {
+      "name": "Test 1",
+      "setup": "",
+      "run": "timeout 1 ./vizitors tests/test1.txt",
+      "input": "",
+      "output": "5 11:10 11:59",
+      "comparison": "Exact",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Test 2",
+      "setup": "",
+      "run": "timeout 1 ./vizitors tests/test2.txt",
+      "input": "",
+      "output": "1 08:00 18:59",
+      "comparison": "Exact",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Test 3",
+      "setup": "",
+      "run": "timeout 1 ./vizitors tests/test3.txt",
+      "input": "",
+      "output": "3 13:20 14:15",
+      "comparison": "Exact",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Test 4",
+      "setup": "",
+      "run": "timeout 1 ./vizitors tests/test4.txt",
+      "input": "",
+      "output": "1 00:00 23:59",
+      "comparison": "Exact",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Test 5",
+      "setup": "",
+      "run": "timeout 1 ./vizitors tests/test5.txt",
+      "input": "",
+      "output": "2 12:00 17:00",
+      "comparison": "Exact",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Test 6",
+      "setup": "",
+      "run": "timeout 1 ./vizitors tests/test6.txt",
+      "input": "",
+      "output": "12 17:00 17:30",
+      "comparison": "Exact",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Test 7",
+      "setup": "",
+      "run": "timeout 1 ./vizitors tests/test7.txt",
+      "input": "",
+      "output": "272 16:05 16:08",
+      "comparison": "Exact",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Test 8",
+      "setup": "",
+      "run": "timeout 1 ./vizitors tests/test8.txt",
+      "input": "",
+      "output": "406 16:02 16:02",
+      "comparison": "Exact",
+      "timeout": 1,
+      "points": 1
+    }
+  ]
+}
