@@ -18,10 +18,12 @@ jobs:
     steps:
       - name: Get repository code
         uses: actions/checkout@v4
-      - name: Build
+      - name: Check
         run: |
-             clang++ -pedantic-errors -std=c++17 vizitors.cpp -o vizitors
-             !(grep -qwRE --include=*.{cc,cpp,h} '<vector>|<list>|<algorithm>|<stack>|<queue>|<deque>|<set>|<map>|<string>' ./* ) &&  (echo \"Build...\" )  || ( echo \"Forbiden STL containers\" && exit 9 )
+              !(grep -qwRE --include=*.{cc,cpp,h} '<vector>|<list>|<algorithm>|<stack>|<queue>|<deque>|<set>|<map>|<string>|<bits' ./* ) &&  (echo \"Build...\" )  || ( echo \"Forbiden STL containers\" && exit 9 )
+     - name: Build
+        run: |
+             clang++ -pedantic-errors -std=c++20 vizitors.cpp -o vizitors
       - name: Autograding
         uses: amcp-pit/autograding@v1
       - name: Memory leaks
@@ -31,6 +33,7 @@ jobs:
         uses: amcp-pit/cpp-linter@v1
         with:
           extra-args-before: '-xc++'
+          extra-args: '-std=c++20'
           after-args: '-DCMAKE_EXPORT_COMPILE_COMMANDS=ON'
       - name: Checkout
         uses: actions/checkout@v4
